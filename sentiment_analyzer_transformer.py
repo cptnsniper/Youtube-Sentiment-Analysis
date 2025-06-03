@@ -21,7 +21,7 @@ import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
-INPUT_CSV  = "youtube_stratified_sample.csv"
+INPUT_CSV  = "channel_videos.csv"
 OUTPUT_CSV = "youtube_with_transformer_sentiment.csv"
 MODEL_NAME = "distilbert-base-uncased-finetuned-sst-2-english"
 

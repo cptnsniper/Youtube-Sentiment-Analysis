@@ -11,7 +11,7 @@ import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # 1. Load your scraped data
-df = pd.read_csv('youtube_stratified_sample.csv')
+df = pd.read_csv('channel_videos.csv')
 
 # 2. Drop any rows where transcript is missing
 df = df.dropna(subset=['transcript'])
