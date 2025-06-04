@@ -4,7 +4,7 @@ from openai import OpenAI
 
 # ─── CONFIGURATION ─────────────────────────────────────────────────────────────
 # Base path where your CSV and output files reside
-BASE_PATH = r"C:\Users\serge\Downloads\tmp"
+BASE_PATH = r"channel_videos"
 
 # Define the dimensions we want to score and their descriptions
 parameters = {
@@ -28,7 +28,7 @@ Separate each number with a comma. Do not include any explanation or extra text.
 
 # ─── LOAD YOUR DATA ────────────────────────────────────────────────────────────
 # Read the CSV that contains the transcripts (and any other columns you have)
-input_csv_path = os.path.join(BASE_PATH, "youtube_with_sentiment.csv")
+input_csv_path = os.path(BASE_PATH)
 df = pd.read_csv(input_csv_path)
 
 # ─── INITIALIZE OPENAI CLIENT ───────────────────────────────────────────────────
@@ -66,6 +66,6 @@ for col in new_data.columns:
     df[col] = new_data[col]
 
 # ─── SAVE THE SCORES TO EXCEL ──────────────────────────────────────────────────
-output_excel_path = os.path.join(BASE_PATH, "new_data.xlsx")
+output_excel_path = os.path("new_data.xlsx")
 new_data.to_excel(output_excel_path, index=False)
 print(f"Saved scored data to: {output_excel_path}")
